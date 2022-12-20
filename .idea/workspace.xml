@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a005e8-d15c-4d0b-8567-222852e739ce" name="Changes" comment="ofofo blog" />
-    <list id="6a646977-882d-4e39-a74d-35429c17d869" name="Changes by Lakesyde" comment="" />
+    <list default="true" id="06a005e8-d15c-4d0b-8567-222852e739ce" name="Changes" comment="ofofo blog">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
@@ -71,9 +77,9 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\IdeaProjects\ofofo\src\africa.semicolon.ofofo" />
-      <recent name="C:\Users\user\IdeaProjects\ofofo\src" />
       <recent name="C:\Users\user\IdeaProjects\ofofo" />
+      <recent name="C:\Users\user\IdeaProjects\ofofo\src" />
+      <recent name="C:\Users\user\IdeaProjects\ofofo\src\africa.semicolon.ofofo" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="data.repositories" />
@@ -180,7 +186,7 @@
       <workItem from="1671199397747" duration="5972000" />
       <workItem from="1671498248905" duration="97000" />
       <workItem from="1671526082133" duration="7761000" />
-      <workItem from="1671553141993" duration="2548000" />
+      <workItem from="1671553141993" duration="4054000" />
     </task>
     <task id="LOCAL-00001" summary="ofofo blog">
       <created>1671362300965</created>
@@ -189,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671362300965</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ofofo blog">
+      <created>1671555841752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671555841752</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
