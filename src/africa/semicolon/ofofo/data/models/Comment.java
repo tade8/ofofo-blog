@@ -1,7 +1,6 @@
 package africa.semicolon.ofofo.data.models;
 
 import lombok.Data;
-import lombok.NonNull;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;

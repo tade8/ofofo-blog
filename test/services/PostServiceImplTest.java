@@ -21,7 +21,7 @@ private PostRepository postRepository;
 
     @BeforeEach
     void setUp() {
-        postService = new PostServiceImpl();
+//        postService = new PostServiceImpl();
 
     }
 
@@ -31,6 +31,7 @@ private PostRepository postRepository;
         createPostRequest.setBody("Egusi is my best soup");
         createPostRequest.setTitle("New Post");
         postService.createPost(createPostRequest);
+
         CreatePostRequest savedPost = postRepository.save(createPostRequest);
         assertNotNull(savedPost);
         assertEquals(1L, postService.viewAllPost().size());
@@ -41,9 +42,7 @@ private PostRepository postRepository;
         CreatePostRequest createPostRequest = new CreatePostRequest();
         createPostRequest.setTitle("New Title");
         createPostRequest.setBody("New body");
-//        postService.createPost(createPostRequest);
-//        assertEquals(1L, postService.viewAllPost().size());
-//        assertEquals(1L, );
+        postService.createPost(createPostRequest);
 
         Post post = postService.viewPost("1");
 

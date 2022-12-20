@@ -3,7 +3,6 @@ package africa.semicolon.ofofo.services;
 import africa.semicolon.ofofo.data.models.Comment;
 import africa.semicolon.ofofo.data.repositories.CommentRepository;
 import africa.semicolon.ofofo.dtos.requests.CreateCommentRequest;
-import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +29,7 @@ public class CommentServiceImpl  implements CommentService {
     }
 
     public List<Comment> viewAllComments() {
-        return (List<Comment>) commentRepository.findAll();
+        return commentRepository.findAll();
     }
 
 }

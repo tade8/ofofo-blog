@@ -1,9 +1,14 @@
 package africa.semicolon.ofofo.dtos.requests;
 
-import lombok.Data;
+import africa.semicolon.ofofo.data.models.Comment;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
-public class CreateCommentRequest {
+@Getter
+@Setter
+@ToString
+public class CreateCommentRequest extends Comment {
     private String commenterName;
     private String id;
     private String comment;

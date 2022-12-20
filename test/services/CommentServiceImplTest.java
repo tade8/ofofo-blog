@@ -2,6 +2,7 @@ package services;
 
 import africa.semicolon.ofofo.dtos.requests.CreateCommentRequest;
 import africa.semicolon.ofofo.services.CommentService;
+import africa.semicolon.ofofo.services.CommentServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,9 @@ class CommentServiceImplTest {
     private CommentService commentService;
 
     @BeforeEach
-    void setUp() {
+//    void setUp() {
 //        commentService = new CommentServiceImpl();
-    }
+//    }
 
     @Test
     void test_That_One_Can_Create_Comment() {

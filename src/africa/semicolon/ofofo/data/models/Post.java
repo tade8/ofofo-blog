@@ -13,9 +13,11 @@ import java.util.List;
 @Data
 public class Post {
     private String title;
-    @Id private String id;
+    @Id
+    private String id;
     private LocalDateTime creationTime = LocalDateTime.now();
     private String body;
-    @DBRef private List<Comment> comments = new ArrayList<>();
+    @DBRef
+    private List<Comment> comments = new ArrayList<>();
 }
 
