@@ -4,73 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a005e8-d15c-4d0b-8567-222852e739ce" name="Changes" comment="ofofo blog">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_6_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ofofo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/ofofo/data/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/ofofo/data/models/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/ofofo/data/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/ofofo/data/models/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/ofofo/data/repositories/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/ofofo/data/repositories/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/ofofo/dtos/requests/CreateCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/ofofo/dtos/requests/CreateCommentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/ofofo/dtos/requests/CreatePostRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/ofofo/dtos/requests/CreatePostRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/ofofo/services/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/ofofo/services/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/controllers/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/controllers/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/data/models/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/data/models/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/data/models/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/data/models/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/dtos/requests/CreateCommentRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/dtos/requests/CreateCommentRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/dtos/requests/CreatePostRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/dtos/requests/CreatePostRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/services/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/africa/semicolon/ofofo/services/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/services/CommentServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/CommentServiceImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/services/PostServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/PostServiceImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/services/CommentServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/services/CommentServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/services/PostServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/services/PostServiceImplTest.java" afterDir="false" />
-    </list>
-    <list id="6a646977-882d-4e39-a74d-35429c17d869" name="Changes by Lakesyde" comment="">
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/ofofo/controllers/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/ofofo/controllers/CommentController.java" afterDir="false" />
-    </list>
+    <list default="true" id="06a005e8-d15c-4d0b-8567-222852e739ce" name="Changes" comment="ofofo blog" />
+    <list id="6a646977-882d-4e39-a74d-35429c17d869" name="Changes by Lakesyde" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -245,7 +180,7 @@
       <workItem from="1671199397747" duration="5972000" />
       <workItem from="1671498248905" duration="97000" />
       <workItem from="1671526082133" duration="7761000" />
-      <workItem from="1671553141993" duration="2070000" />
+      <workItem from="1671553141993" duration="2548000" />
     </task>
     <task id="LOCAL-00001" summary="ofofo blog">
       <created>1671362300965</created>
