@@ -1,21 +1,22 @@
 package services;
 
+import africa.semicolon.ofofo.Main;
 import africa.semicolon.ofofo.dtos.requests.CreateCommentRequest;
 import africa.semicolon.ofofo.services.CommentService;
-import africa.semicolon.ofofo.services.CommentServiceImpl;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.stereotype.Service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Service
+@SpringBootTest(classes = Main.class)
 class CommentServiceImplTest {
+
     @Autowired
     private CommentService commentService;
 
-    @BeforeEach
+//    @BeforeEach
 //    void setUp() {
 //        commentService = new CommentServiceImpl();
 //    }
