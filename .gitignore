@@ -1,6 +1,8 @@
 ### IntelliJ IDEA ###
 ofofo.iml/
-.idea
+.idea/
+target/
+
 
 ### Eclipse ###
 .apt_generated
