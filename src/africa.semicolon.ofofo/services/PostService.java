@@ -5,13 +5,14 @@ import africa.semicolon.ofofo.dtos.requests.CreateCommentRequest;
 import africa.semicolon.ofofo.dtos.requests.CreatePostRequest;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PostService {
     void createPost(CreatePostRequest createPostRequest);
     void updatePost(String id, String title, String body);
     void deletePost(String id);
     void deletePostByTitle(String title);
-    Post viewPost(String id);
+    Optional<Post> viewPost(String id);
     void addComment(CreateCommentRequest createCommentRequest);
     List<Post> viewAllPost();
 }
