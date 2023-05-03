@@ -34,9 +34,10 @@ class CommentServiceImplTest {
         commentRequest.setComment("My new Comment");
 
         when(commentRepository.save(any())).then(returnsFirstArg());
-        var result = commentService.createComment(commentRequest);
+        var comment = commentService.createComment(commentRequest);
 
-        assertNotNull(result);
+        assertNotNull(comment);
+        assertEquals(commentRequest.getComment(), "My new Comment");
     }
 
 }
