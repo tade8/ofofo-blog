@@ -3,15 +3,18 @@ package africa.semicolon.ofofo.services;
 import africa.semicolon.ofofo.data.models.Comment;
 import africa.semicolon.ofofo.data.repositories.CommentRepository;
 import africa.semicolon.ofofo.dtos.requests.CreateCommentRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CommentServiceImpl  implements CommentService {
-    @Autowired
-    private CommentRepository commentRepository;
+public class CommentServiceImpl implements CommentService {
+
+    private final CommentRepository commentRepository;
+
+    public CommentServiceImpl(CommentRepository commentRepository) {
+        this.commentRepository = commentRepository;
+    }
 
     @Override
     public Comment createComment(CreateCommentRequest commentRequest) {
