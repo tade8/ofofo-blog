@@ -2,19 +2,21 @@ package africa.semicolon.ofofo.services;
 
 import africa.semicolon.ofofo.data.models.Comment;
 import africa.semicolon.ofofo.data.models.Post;
+import africa.semicolon.ofofo.data.repositories.CommentRepository;
 import africa.semicolon.ofofo.data.repositories.PostRepository;
 import africa.semicolon.ofofo.dtos.requests.CreateCommentRequest;
 import africa.semicolon.ofofo.dtos.requests.CreatePostRequest;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
+@AllArgsConstructor
 public class PostServiceImpl implements PostService {
-    @Autowired
     private PostRepository postRepository;
-    @Autowired
-    private CommentService commentService;
+    private CommentRepository commentRepository;
 
     @Override
     public void createPost(CreatePostRequest createPostRequest) {
@@ -33,8 +35,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePost(String id) {
-        Post post = postRepository.findPostById(id);
-        postRepository.delete(post);
+        postRepository.deleteById(id);
     }
 
     @Override
@@ -44,14 +45,22 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Post viewPost(String title) {
-        return postRepository.findPostByTitle(title);
+    public Optional<Post> viewPost(String id) {
+        return postRepository.findPostById(id);
     }
+
     @Override
     public void addComment(CreateCommentRequest createCommentRequest) {
-        Comment savedComment = commentService.createComment(createCommentRequest);
-        Post savedPost = postRepository.findPostById(createCommentRequest.getId());
+        Comment comment = new Comment();
+
+        comment.setComment(createCommentRequest.getComment());
+        comment.setCommenterName(createCommentRequest.getCommenterName());
+        var savedComment = commentRepository.save(comment);
+
+        Post savedPost = postRepository.findPostById(createCommentRequest.getId()).
+                orElseThrow(()-> new RuntimeException("This post does not exist"));
         savedPost.getComments().add(savedComment);
+
         postRepository.save(savedPost);
     }
 

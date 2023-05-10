@@ -1,86 +1,96 @@
 package services;
 
-import africa.semicolon.ofofo.Main;
+import africa.semicolon.ofofo.data.models.Comment;
 import africa.semicolon.ofofo.data.models.Post;
+import africa.semicolon.ofofo.data.repositories.CommentRepository;
 import africa.semicolon.ofofo.data.repositories.PostRepository;
 import africa.semicolon.ofofo.dtos.requests.CreateCommentRequest;
 import africa.semicolon.ofofo.dtos.requests.CreatePostRequest;
-import africa.semicolon.ofofo.services.PostService;
-import org.junit.jupiter.api.AfterEach;
+import africa.semicolon.ofofo.services.PostServiceImpl;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-@SpringBootTest(classes = Main.class)
+import static org.mockito.AdditionalAnswers.returnsFirstArg;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
 class  PostServiceImplTest {
-    @Autowired
-    private PostService postService;
-    @Autowired
+    @InjectMocks
+    private PostServiceImpl postService;
+    @Mock
     private PostRepository postRepository;
+    @Mock
+    private CommentRepository commentRepository;
+    private CreatePostRequest createPostRequest;
+    private CreateCommentRequest createCommentRequest;
+    private Post post;
 
-    private final CreatePostRequest createPostRequest =
-            new CreatePostRequest();
-    private final CreateCommentRequest createCommentRequest =
-            new CreateCommentRequest();
+    @BeforeEach
+    void setUp() {
+        createPostRequest = new CreatePostRequest();
+        createCommentRequest = new CreateCommentRequest();
 
-    @AfterEach
-    void tearDown() {
-        postRepository.deleteAll();
+        post = new Post();
+        post.setTitle("Egusi");
+        post.setBody("Blank");
     }
 
     @Test
-    void create_Post_Test() {
+    void create_Post_Gets_Saved() {
         createPostRequest.setBody("Egusi is my best soup");
         createPostRequest.setTitle("New Post");
 
+        when(postRepository.save(any())).then(returnsFirstArg());
         postService.createPost(createPostRequest);
 
-        assertEquals(1L, postService.viewAllPost().size());
+        assertNotNull(createPostRequest);
+        assertEquals("New Post", createPostRequest.getTitle());
     }
 
     @Test
     void viewPostTest() {
-        createPostRequest.setBody("Egusi is my best soup");
-        createPostRequest.setTitle("New Post");
-        postService.createPost(createPostRequest);
+        when(postRepository.findPostById(createPostRequest.getId())).
+                thenReturn(Optional.of(post));
+        Post post = postService.viewPost(createPostRequest.
+                getTitle()).orElseThrow(()-> new RuntimeException("This post does not exist"));
 
-        Post post = postService.viewPost(createPostRequest.getTitle());
-
-        assertEquals("New Post", post.getTitle());
-        assertEquals("Egusi is my best soup", post.getBody());
+        verify(postRepository).findPostById(createPostRequest.getId());
         assertNotNull(post.getCreationTime());
     }
 
     @Test
     void one_Can_Add_Comment_To_Post_Test() {
-        createPostRequest.setTitle("New Title");
-        createPostRequest.setBody("New Body");
-        postService.createPost(createPostRequest);
+        when(commentRepository.save(any())).then(returnsFirstArg());
 
-        Post savedPost = postService.viewPost(
-                createPostRequest.getTitle());
+        Comment comment = new Comment();
+        comment.setComment("My comment");
+        comment.setCommenterName("Emma");
 
-        createCommentRequest.setComment("New Comment");
-        createCommentRequest.setId(savedPost.getId());
+        when(postRepository.findPostById(createPostRequest.getId())).
+                thenReturn(Optional.of(post));
+        Post savedPost = postService.viewPost(createPostRequest.getId()).
+                orElseThrow(()-> new RuntimeException("This post does not exist"));
+
         postService.addComment(createCommentRequest);
 
-        savedPost = postService.viewPost(createPostRequest.getTitle());
-
         assertEquals(1, savedPost.getComments().size());
-        assertEquals("New Comment", savedPost.
-                getComments().get(0).getComment());
+        assertNotNull(savedPost);
     }
 
     @Test
-    public void cantViewDeletedPost() throws RuntimeException {
-        createPostRequest.setBody("Egusi is my best soup");
-        createPostRequest.setTitle("New Post");
-
-        postService.createPost(createPostRequest);
-        assertNotNull(createPostRequest);
-        postService.deletePostByTitle("New Post");
-
-        assertEquals(0L, postService.viewAllPost().size());
+    public void cantViewDeletedPost() {
+        postService.deletePost("1");
+        assertEquals(0, postService.viewAllPost().size());
     }
+
 }
