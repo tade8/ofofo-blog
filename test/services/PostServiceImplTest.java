@@ -33,11 +33,16 @@ class  PostServiceImplTest {
     private CommentRepository commentRepository;
     private CreatePostRequest createPostRequest;
     private CreateCommentRequest createCommentRequest;
+    private Post post;
 
     @BeforeEach
     void setUp() {
         createPostRequest = new CreatePostRequest();
         createCommentRequest = new CreateCommentRequest();
+
+        post = new Post();
+        post.setTitle("Egusi");
+        post.setBody("Blank");
     }
 
     @Test
@@ -54,12 +59,8 @@ class  PostServiceImplTest {
 
     @Test
     void viewPostTest() {
-        Post post1 = new Post();
-        post1.setTitle("Egusi");
-        post1.setBody("Blank");
-
         when(postRepository.findPostById(createPostRequest.getId())).
-                thenReturn(Optional.of(post1));
+                thenReturn(Optional.of(post));
         Post post = postService.viewPost(createPostRequest.
                 getTitle()).orElseThrow(()-> new RuntimeException("This post does not exist"));
 
@@ -69,10 +70,6 @@ class  PostServiceImplTest {
 
     @Test
     void one_Can_Add_Comment_To_Post_Test() {
-        Post post1 = new Post();
-        post1.setTitle("New Title");
-        post1.setBody("New Body");
-
         when(commentRepository.save(any())).then(returnsFirstArg());
 
         Comment comment = new Comment();
@@ -80,7 +77,7 @@ class  PostServiceImplTest {
         comment.setCommenterName("Emma");
 
         when(postRepository.findPostById(createPostRequest.getId())).
-                thenReturn(Optional.of(post1));
+                thenReturn(Optional.of(post));
         Post savedPost = postService.viewPost(createPostRequest.getId()).
                 orElseThrow(()-> new RuntimeException("This post does not exist"));
 
